@@ -228,44 +228,33 @@ makeCupButton.addEventListener("click", makeTea);
 makeCupButton.addEventListener("mouseover", activateBottom);
 makeCupButton.addEventListener("mouseout", activateBottom);
 
-let image1 = document.querySelector(".img-1");
-let image2 = document.querySelector(".img-2");
-let image3 = document.querySelector(".img-3");
-let image4 = document.querySelector(".img-4");
+//Boxes click events
 
-function hideImage1() {
-  image1.classList.toggle("img-1-hidden");
+function showImage(element) {
+  element.classList.remove("image-hide");
+  element.lastElementChild.classList.add("text-hide");
 }
 
-function hideImage2() {
-  image2.classList.toggle("img-2-hidden");
+function showText(element) {
+  element.classList.add("image-hide");
+  element.lastElementChild.classList.remove("text-hide");
 }
 
-function hideImage3() {
-  image3.classList.toggle("img-3-hidden");
-}
-
-function hideImage4() {
-  image4.classList.toggle("img-4-hidden");
-}
-
-image1.addEventListener("mousedown", hideImage1);
-image2.addEventListener("mousedown", hideImage2);
-image3.addEventListener("mousedown", hideImage3);
-image4.addEventListener("mousedown", hideImage4);
-
-function checkImages() {
-  if (image1.className === "img-1 img-1-hidden") {
-    hideImage1();
-  }
-  if (image2.className === "img-2 img-2-hidden") {
-    hideImage2();
-  }
-  if (image3.className === "img-3 img-3-hidden") {
-    hideImage3();
-  }
-  if (image4.className === "img-4 img-4-hidden") {
-    hideImage4();
+function checkbox(event) {
+  if (event.currentTarget.className.includes("image-hide")) {
+    showImage(event.currentTarget);
+  } else {
+    showText(event.currentTarget);
   }
 }
-document.onmouseup = checkImages;
+
+let boxes = document.querySelectorAll(".box");
+let box1 = document.querySelector(".box-1");
+let box2 = document.querySelector(".box-2");
+let box3 = document.querySelector(".box-3");
+let box4 = document.querySelector(".box-4");
+
+box1.addEventListener("click", checkbox);
+box2.addEventListener("click", checkbox);
+box3.addEventListener("click", checkbox);
+box4.addEventListener("click", checkbox);
