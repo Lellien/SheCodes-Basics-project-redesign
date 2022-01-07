@@ -3,169 +3,13 @@ body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-.page {
-  max-width: 900px;
-  margin: 0 auto;
-  border-radius: 4px;
-  background: radial-gradient(
-    circle at 10% 20%,
-    rgba(255, 225, 118, 0.7) 0%,
-    rgb(247, 212, 170) 34%,
-    rgba(119, 83, 38, 1) 54.2%,
-    rgba(79, 160, 204, 0.8) 100.3%
-  );
-}
-.top {
-  text-align: center;
-  background: rgba(255, 225, 118, 0.1);
-  margin: 0 auto;
-  padding: 0;
-  border-radius: 4px;
-  box-shadow: 1px 8px 9px rgb(119 83 38 / 90%);
-  color: rgba(34, 69, 88, 0.9);
-}
 
 h1 {
-  font-size: 45px;
-  margin-block-end: 0;
-}
-
-.heading {
-  font-size: 22px;
-  font-weight: 400;
-  vertical-align: bottom;
-}
-
-.quote {
-  margin: 20px auto 20px;
-  width: fit-content;
-  text-align: center;
-  padding: 1px 5px;
-  background: linear-gradient(
-    to right,
-    rgba(247, 212, 170, 1),
-    rgba(254, 251, 246, 0.3) 80%
-  );
-  border-radius: 4px;
-  color: rgba(119, 83, 38, 1);
-  box-shadow: rgba(0, 0, 0, 0.3) 2px 3px 2px;
-}
-
-.hr-1 {
-  height: 5px;
-  margin-block-end: 0;
-  background: rgba(254, 251, 246, 0.9);
-  border: none;
-}
-
-.middle {
-  margin: 0 auto;
-  border-radius: 4px;
-  height: 880px;
-}
-
-.intro {
-  font-weight: normal;
-  margin: 10px;
-  font-size: 18px;
-  color: rgba(34, 69, 88, 1);
-}
-
-.box-1-all,
-.box-2-all,
-.box-3-all,
-.box-4-all {
-  position: relative;
-  width: 400px;
-  height: 293.328px;
-  border: 10px solid rgba(34, 69, 88, 0.9);
-  border-radius: 50px;
-  font-weight: normal;
-}
-
-.box-1-all {
-  left: 20px;
-  top: 50px;
-}
-.box-2-all {
-  left: 460px;
-  bottom: 263px;
-}
-.box-3-all {
-  left: 20px;
-  bottom: 190px;
-}
-.box-4-all {
-  left: 460px;
-  bottom: 503px;
-}
-
-.box-1-front,
-.box-2-front,
-.box-3-front,
-.box-4-front {
-  background: rgba(79, 160, 204, 0);
-  width: 400px;
-  height: 293.328px;
-  position: relative;
-  bottom: 68px;
-  z-index: 2;
-  border-radius: 40px;
-}
-
-.box-1-label,
-.box-2-label,
-.box-3-label,
-.box-4-label {
-  color: rgba(255, 225, 118, 0.7);
-  text-align: center;
-  background: rgba(34, 69, 88, 0.9);
-  position: relative;
-  top: 14px;
-  left: 25%;
-  width: 50%;
-  border-radius: 40px 40px 0px 0px;
-  z-index: 3;
-}
-
-.img-1,
-.img-2,
-.img-3,
-.img-4 {
-  border-radius: 40px;
-  display: block;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  cursor: pointer;
-  object-fit: cover;
-}
-
-.img-1-hidden,
-.img-2-hidden,
-.img-3-hidden,
-.img-4-hidden {
-  visibility: hidden;
-}
-.box-1-back,
-.box-2-back,
-.box-3-back,
-.box-4-back {
-  background: rgba(79, 160, 204, 0.4);
-  border-radius: 40px;
-  position: relative;
-  bottom: 328px;
-  width: 400px;
-  height: 293.328px;
-  z-index: 0;
-}
-
-.impatient {
-  transition: all 150ms ease-in-out;
-}
-
-.impatient:hover {
-  background: rgba(254, 251, 246, 0.5);
+  font-size: 75px;
+  color: rgba(34, 69, 88, 0.9);
+  background: rgba(255, 225, 118, 0.3);
+  /* border-radius: 4px;
+  box-shadow: 1px 8px 9px rgb(119 83 38 / 90%); */
 }
 
 p {
@@ -174,19 +18,12 @@ p {
   text-shadow: rgb(79, 160, 204) 2px 2px 15px;
   text-align: center;
   line-height: 1.2;
-  font-size: 15px;
+  font-size: 16px;
+}
+hr {
+  margin-bottom: 0;
 }
 
-.hr-3 {
-  margin-block-end: 0;
-}
-.bottom {
-  text-align: center;
-}
-
-.bottom-highlight {
-  background: rgba(255, 255, 255, 0.2);
-}
 button {
   font-size: 16px;
   color: rgba(119, 83, 38, 1);
@@ -205,6 +42,135 @@ button:hover {
     rgba(210, 86, 0, 1) 70%,
     rgba(105, 70, 57, 1) 90%
   );
+}
+
+footer {
+  text-align: center;
+  font-family: monospace;
+  font-size: 14px;
+  margin: 20px auto;
+}
+
+header .love-of {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.page {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 3px;
+  border: 5px solid rgb(119, 83, 38, 0.6);
+  border-radius: 4px;
+}
+
+.quote {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  padding: 15px 25px;
+  /* background: linear-gradient(
+    to right,
+    rgba(247, 212, 170, 1),
+    rgba(254, 251, 246, 0.3) 80%
+  ); */
+  border-radius: 4px;
+  color: rgba(119, 83, 38, 1);
+  box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.3);
+}
+.main-content {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgba(255, 225, 118, 0.7) 0%,
+    rgb(247, 212, 170) 34%,
+    rgba(119, 83, 38, 1) 54.2%,
+    rgba(79, 160, 204, 0.8) 100.3%
+  );
+}
+
+.intro {
+  font-weight: normal;
+  margin: 10px;
+  font-size: 18px;
+  color: rgba(34, 69, 88, 1);
+}
+
+.box-1 {
+  background-image: url(/images/cup-of-tea.jpeg);
+}
+
+.box-2 {
+  background-image: url(/images/uk-teacup.jpg);
+}
+.box-3 {
+  background-image: url(/images/afternoon-tea.jpg);
+}
+.box-4 {
+  background-image: url(/images/alice-tea-party.jpg);
+}
+
+.image-hide {
+  background-image: url();
+}
+
+.text-hide {
+  visibility: hidden;
+}
+
+.box {
+  background-color: rgba(79, 160, 204, 0.4);
+  background-size: cover;
+  width: 100%;
+  height: 350px;
+  border: 10px solid rgba(34, 69, 88, 0.9);
+  border-radius: 30px;
+}
+
+/* .box-1-front,
+.box-2-front,
+.box-3-front,
+.box-4-front {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  bottom: 68px;
+  z-index: 2;
+  border-radius: 40px;
+} */
+
+.box-1-label,
+.box-2-label,
+.box-3-label,
+.box-4-label {
+  color: rgba(255, 225, 118, 0.7);
+  text-align: center;
+  background: rgba(34, 69, 88, 0.9);
+  position: relative;
+  top: 14px;
+  left: 25%;
+  width: 50%;
+  border-radius: 40px 40px 0px 0px;
+  z-index: 3;
+}
+
+.box p {
+  height: 350px;
+}
+
+.impatient {
+  transition: all 150ms ease-in-out;
+}
+
+.impatient:hover {
+  background: rgba(254, 251, 246, 0.5);
+}
+
+.bottom {
+  text-align: center;
+}
+
+.bottom-highlight {
+  background: rgba(255, 255, 255, 0.2);
 }
 .handle {
   color: rgba(255, 255, 255, 0.8);
@@ -271,9 +237,9 @@ button:hover {
 .img-sugar-4 {
   width: 200px;
 }
-footer {
-  text-align: center;
-  font-family: monospace;
-  font-size: 14px;
-  margin: 20px auto;
+
+.container {
+  max-width: 90%;
+  margin: 50px 50px;
+  padding: 8px;
 }
