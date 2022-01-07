@@ -1,3 +1,4 @@
+//Kettle switch
 let kettleStatus = document.querySelector(".kettle-status");
 function switchKettle() {
   if (kettleStatus.innerHTML === "<strong>OFF</strong>") {
@@ -55,11 +56,11 @@ function makeTea() {
                                          <br />
                                          <img
                                           class="img-teapot"
-                                          src="teapot.png"
+                                          src="/images/teapot.png"
                                           alt="traditional ceramic teapot"/>
                                          <img
                                           class="img-sugar"
-                                          src="sugar cube.png"
+                                          src="/images/sugar cube.png"
                                           alt="sugar cube"/>
                                           <br/>`;
                 } else if (milk === "milk") {
@@ -67,15 +68,15 @@ function makeTea() {
                                           <br />
                                           <img
                                            class="img-teapot"
-                                           src="teapot.png"
+                                           src="/images/teapot.png"
                                            alt="traditional ceramic teapot"/>
                                           <img
                                            class="img-milk"
-                                           src="https://www.pngkey.com/png/full/67-671533_milk-jug.png"
+                                           src="/images/milk.png"
                                            alt="milk jug pouring to a splash"/>
                                           <img
                                           class="img-sugar"
-                                          src="sugar cube.png"
+                                          src="/images/sugar cube.png"
                                           alt="sugar cube"/>
                                           <br/>`;
                 }
@@ -89,11 +90,11 @@ function makeTea() {
                                          <br />
                                          <img
                                           class="img-teapot"
-                                          src="teapot.png"
+                                          src="/images/teapot.png"
                                           alt="traditional ceramic teapot"/>
                                          <img
                                           class="img-sugar-2"
-                                          src="2 sugars.png"
+                                          src="/images/2 sugars.png"
                                           alt="2 sugar cubes"/>
                                           <br/>`;
                 } else if (milk === "milk") {
@@ -101,7 +102,7 @@ function makeTea() {
                                           <br />
                                           <img
                                            class="img-teapot"
-                                           src="teapot.png"
+                                           src="/images/teapot.png"
                                            alt="traditional ceramic teapot"/>
                                           <img
                                            class="img-milk"
@@ -109,7 +110,7 @@ function makeTea() {
                                            alt="milk jug pouring to a splash"/>
                                           <img
                                           class="img-sugar-2"
-                                          src="2 sugars.png"
+                                          src="/images/2 sugars.png"
                                           alt="2 sugar cubes"/>
                                           <br/>`;
                 }
@@ -123,11 +124,11 @@ function makeTea() {
                                          <br />
                                          <img
                                           class="img-teapot"
-                                          src="teapot.png"
+                                          src="/images/teapot.png"
                                           alt="traditional ceramic teapot"/>
                                          <img
                                           class="img-sugar-3"
-                                          src="3 sugars.png"
+                                          src="/images/3 sugars.png"
                                           alt="3 sugar cubes"/>
                                           <br/>`;
                 } else if (milk === "milk") {
@@ -135,15 +136,15 @@ function makeTea() {
                                           <br />
                                           <img
                                            class="img-teapot"
-                                           src="teapot.png"
+                                           src="/images/teapot.png"
                                            alt="traditional ceramic teapot"/>
                                           <img
                                            class="img-milk"
-                                           src="https://www.pngkey.com/png/full/67-671533_milk-jug.png"
+                                           src="/images/milk.png"
                                            alt="milk jug pouring to a splash"/>
                                           <img
                                           class="img-sugar-3"
-                                          src="3 sugars.png"
+                                          src="/images/3 sugars.png"
                                           alt="3 sugar cubes"/>
                                           <br/>`;
                 }
@@ -157,11 +158,11 @@ function makeTea() {
                                          <br />
                                          <img
                                           class="img-teapot"
-                                          src="teapot.png"
+                                          src="/images/teapot.png"
                                           alt="traditional ceramic teapot"/>
                                          <img
                                           class="img-sugar-4"
-                                          src="4 sugars.png"
+                                          src="/images/4 sugars.png"
                                           alt="4 sugar cubes"/>
                                           <br/>`;
                 } else if (milk === "milk") {
@@ -169,15 +170,15 @@ function makeTea() {
                                           <br />
                                           <img
                                            class="img-teapot"
-                                           src="teapot.png"
+                                           src="/images/teapot.png"
                                            alt="traditional ceramic teapot"/>
                                           <img
                                            class="img-milk"
-                                           src="https://www.pngkey.com/png/full/67-671533_milk-jug.png"
+                                           src="/images/milk.png"
                                            alt="milk jug pouring to a splash"/>
                                           <img
                                           class="img-sugar-4"
-                                          src="4 sugars.png"
+                                          src="/images/4 sugars.png"
                                           alt="4 sugar cubes"/>
                                           <br/>`;
                 }
@@ -195,7 +196,7 @@ function makeTea() {
                                          <br />
                                          <img
                                           class="img-teapot"
-                                          src="teapot.png"
+                                          src="/images/teapot.png"
                                           alt="traditional ceramic teapot"/>
                                           <br/>`;
                 } else if (milk === "milk") {
@@ -203,11 +204,11 @@ function makeTea() {
                                           <br />
                                           <img
                                            class="img-teapot"
-                                           src="teapot.png"
+                                           src="/images/teapot.png"
                                            alt="traditional ceramic teapot"/>
                                           <img
                                            class="img-milk"
-                                           src="https://www.pngkey.com/png/full/67-671533_milk-jug.png"
+                                           src="/images/milk.png"
                                            alt="milk jug pouring to a splash"/>
                                            <br/>`;
                 }
