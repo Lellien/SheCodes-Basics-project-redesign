@@ -233,11 +233,13 @@ makeCupButton.addEventListener("mouseout", activateBottom);
 function showImage(element) {
   element.classList.remove("image-hide");
   element.lastElementChild.classList.add("text-hide");
+  element.lastElementChild.classList.remove("read");
 }
 
 function showText(element) {
   element.classList.add("image-hide");
   element.lastElementChild.classList.remove("text-hide");
+  element.lastElementChild.classList.add("read");
 }
 
 function checkbox(event) {
