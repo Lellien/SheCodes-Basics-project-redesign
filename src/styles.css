@@ -1,3 +1,7 @@
+:root {
+  --bold-color-rgb: 34, 69, 88;
+}
+
 body {
   background: rgba(254, 251, 246, 0.9);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -6,11 +10,12 @@ body {
 
 h1 {
   font-size: 75px;
-  color: rgba(34, 69, 88, 0.9);
+  color: rgba(var(--bold-color-rgb), 0.9);
   background: rgba(255, 225, 118, 0.3);
   /* border-radius: 4px;
   box-shadow: 1px 8px 9px rgb(119 83 38 / 90%); */
 }
+
 p {
   margin: 0;
   padding: 0;
@@ -22,18 +27,18 @@ hr {
 button {
   font-size: 16px;
   color: rgba(119, 83, 38, 1);
-  padding: 7% 5%;
+  padding: 58px 43px;
   border-radius: 0 0 30px 30px;
   transition: all 150ms ease-in-out;
   cursor: pointer;
-  margin: 0px 0px 25px 0px;
 }
 button:hover {
   color: transparent;
   background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0.8) 28%,
-    rgba(178, 48, 1, 1) 29%,
+    rgba(255, 255, 255, 0.8) 30%,
+    rgba(178, 48, 1, 1) 31%,
     rgba(210, 86, 0, 1) 70%,
     rgba(105, 70, 57, 1) 90%
   );
@@ -46,11 +51,17 @@ footer {
   margin: 20px auto;
 }
 
-header .love-of {
+h1 .love-of {
   font-size: 32px;
   font-weight: 400;
 }
 
+p.intro {
+  width: 70%;
+  font-size: 18px;
+  color: rgb(var(--bold-color-rgb));
+  padding: 20px 15px 8px;
+}
 .page {
   max-width: 1200px;
   margin: 60px auto;
@@ -82,19 +93,12 @@ header .love-of {
   );
 }
 
-.intro {
-  font-weight: normal;
-  margin: 10px;
-  font-size: 18px;
-  color: rgba(34, 69, 88, 1);
-}
-
 .box {
   background-color: rgba(79, 160, 204, 0.4);
   background-size: cover;
   width: 100%;
   height: 350px;
-  border: 10px solid rgba(34, 69, 88, 0.9);
+  border: 10px solid rgba(var(--bold-color-rgb), 0.9);
   border-radius: 30px;
   overflow: hidden;
 }
@@ -120,24 +124,18 @@ header .love-of {
   visibility: hidden;
 }
 
-.box-1-label,
-.box-2-label,
-.box-3-label,
-.box-4-label {
-  color: rgba(255, 225, 118, 0.7);
+h2.label {
   text-align: center;
-  background: rgba(34, 69, 88, 0.9);
-  position: relative;
-  top: 14px;
-  left: 25%;
+  margin: 0 auto;
   width: 50%;
+  color: rgba(255, 225, 118, 0.7);
+  background: rgba(var(--bold-color-rgb), 0.9);
   border-radius: 40px 40px 0px 0px;
-  z-index: 3;
 }
 
 .box p {
   padding: 5px;
-  color: rgb(34, 69, 88);
+  color: rgb(var(--bold-color-rgb));
   text-shadow: rgb(79, 160, 204) 2px 2px 15px;
   text-align: center;
   line-height: 1.5;
@@ -147,6 +145,7 @@ header .love-of {
   overflow: scroll;
   position: relative;
 }
+
 .read {
   animation: 3s 1 forwards read-up;
 }
@@ -157,11 +156,9 @@ header .love-of {
     overflow: hidden;
     opacity: 0;
     text-shadow: none;
-    font-weight: calc(1%);
   }
   45% {
     overflow: hidden;
-    font-weight: calc(90%);
   }
 
   80% {
@@ -171,7 +168,6 @@ header .love-of {
     overflow: scroll;
   }
   90% {
-    font-weight: calc(100%);
     opacity: 1;
   }
 
@@ -180,48 +176,36 @@ header .love-of {
   }
 }
 
-.impatient {
+.skip-link {
+  color: rgb(var(--bold-color-rgb));
   transition: all 150ms ease-in-out;
 }
 
-.impatient:hover {
-  background: rgba(254, 251, 246, 0.5);
+.skip-link:hover {
+  background: rgb(var(--bold-color-rgb));
+  border-radius: 3px;
+  color: rgba(254, 251, 246, 1);
+  text-decoration: none;
 }
 
 .bottom {
   text-align: center;
+  /* background: rgba(79, 160, 204, 0.1); */
 }
 
 .bottom-highlight {
   background: rgba(255, 255, 255, 0.2);
 }
-.handle {
-  color: rgba(255, 255, 255, 0.8);
-  text-shadow: rgba(0, 0, 0, 1) 2px 2px;
-  font-size: 100px;
-  position: relative;
-  top: 25px;
-  right: 11px;
-}
-.arrow {
-  color: rgba(255, 255, 255, 0.8);
-  text-shadow: rgba(0, 0, 0, 1) 2px 2px;
-  font-size: 100px;
-  position: relative;
-  top: 25px;
-  right: 11px;
-}
-.make-cuppa {
-  font-size: 18px;
-  color: rgb(255, 255, 255);
-  text-shadow: rgb(0, 0, 0) 1px 1px;
-}
+
 .kettle {
-  font-size: 12px;
+  padding: 0 5px;
+  border-radius: 0 0 5px 5px;
+  font-size: 14px;
+  font-weight: 500;
   background: rgb(247, 212, 170);
-  box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px;
+  box-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
   max-width: fit-content;
-  margin: 0 0 0 700px;
+  margin: 0 0 0 20%;
 }
 .kettle-status {
   color: rgb(162, 19, 3);
@@ -230,11 +214,44 @@ header .love-of {
 
 .kettle-status-on {
   color: rgba(79, 160, 204, 1);
-  background: rgb(34, 69, 88);
+  background: rgb(var(--bold-color-rgb));
+}
+
+.cup-invite {
+  padding: 40px 0 50px;
+}
+
+.cup {
+  margin: 0 auto;
+}
+
+.handle {
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: rgba(0, 0, 0, 1) 2px 2px;
+  line-height: 1;
+  font-size: calc(100px * 1);
+  position: relative;
+  bottom: 8px;
+  right: 3px;
+}
+
+.make-cuppa,
+.arrow,
+.enjoy {
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px rgb(0, 0, 0);
+}
+
+.arrow {
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: rgb(0 0 0) 2px 2px;
+  font-size: 100px;
 }
 
 .result {
   text-align: center;
+  padding: 0 0 10px 0;
 }
 
 .img-teapot {
@@ -261,8 +278,66 @@ header .love-of {
   width: 200px;
 }
 
-.container {
-  max-width: 90%;
-  margin: 50px 50px;
-  padding: 8px;
+.smiley-symbol {
+  font-size: 28px;
+  color: rgba(255, 225, 118, 1);
+  text-shadow: 2px -1px 3px rgb(var(--bold-color-rgb));
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .box-section {
+    padding: 0 10% 0;
+  }
+}
+
+@media (max-width: 768px) {
+  p.intro {
+    width: 100%;
+    text-align: center;
+  }
+
+  div.make-cuppa {
+    margin-bottom: 20px;
+  }
+  button {
+    padding: 51px 36px;
+  }
+  .handle {
+    font-size: calc(100px * 0.75);
+  }
+}
+
+@media (max-width: 576px) {
+  p.intro {
+    font-size: 16px;
+  }
+  .box-section {
+    padding: 0 5% 0;
+  }
+
+  .box {
+    height: 300px;
+  }
+
+  .enjoy {
+    font-size: 20px;
+  }
+}
+@media (max-width: 450px) {
+  .box {
+    height: 270px;
+  }
+  .box-1 {
+    background-position: 64% 0;
+  }
+  /* .box-1, */
+  .box-2,
+  .box-3 {
+    background-position: center;
+  }
+
+  h2.label {
+    font-size: calc(1rem + 0.9vw);
+    line-height: 1.5;
+  }
 }

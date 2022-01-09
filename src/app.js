@@ -52,33 +52,31 @@ function makeTea() {
             switch (sugar) {
               case "1": {
                 if (milk === "no milk") {
-                  cupMade.innerHTML = `<div class="make-cuppa">Enjoy your tea with ${milk} and ${sugar} sugar! 😀 </div>
-                                         <br />
+                  cupMade.innerHTML = `<div class="mt-3 mb-3 enjoy">Enjoy your tea with ${milk} and ${sugar} sugar! <i class="fas fa-grin smiley-symbol"></i> </div>
                                          <img
-                                          class="img-teapot"
+                                          class="img-fluid img-teapot"
                                           src="/images/teapot.png"
                                           alt="traditional ceramic teapot"/>
                                          <img
-                                          class="img-sugar"
+                                          class="img-fluid img-sugar"
                                           src="/images/sugar cube.png"
                                           alt="sugar cube"/>
-                                          <br/>`;
+                                          `;
                 } else if (milk === "milk") {
-                  cupMade.innerHTML = `<div class="make-cuppa">Enjoy your tea with ${milk} and ${sugar} sugar! 😀 </div>
-                                          <br />
+                  cupMade.innerHTML = `<div class="mt-3 mb-3 enjoy">Enjoy your tea with ${milk} and ${sugar} sugar! <i class="fas fa-grin smiley-symbol"></i> </div>
                                           <img
-                                           class="img-teapot"
+                                           class="img-fluid img-teapot"
                                            src="/images/teapot.png"
                                            alt="traditional ceramic teapot"/>
                                           <img
-                                           class="img-milk"
+                                           class="img-fluid img-milk"
                                            src="/images/milk.png"
                                            alt="milk jug pouring to a splash"/>
                                           <img
-                                          class="img-sugar"
+                                          class="img-fluid img-sugar"
                                           src="/images/sugar cube.png"
                                           alt="sugar cube"/>
-                                          <br/>`;
+                                          `;
                 }
 
                 break;
@@ -86,33 +84,31 @@ function makeTea() {
 
               case "2": {
                 if (milk === "no milk") {
-                  cupMade.innerHTML = `<div class="make-cuppa">Enjoy your tea with ${milk} and ${sugar} sugars! 😀 </div>
-                                         <br />
+                  cupMade.innerHTML = `<div class="mt-3 mb-3 enjoy">Enjoy your tea with ${milk} and ${sugar} sugars! <i class="fas fa-grin smiley-symbol"></i> </div>
                                          <img
-                                          class="img-teapot"
+                                          class="img-fluid img-teapot"
                                           src="/images/teapot.png"
                                           alt="traditional ceramic teapot"/>
                                          <img
-                                          class="img-sugar-2"
+                                          class="img-fluid img-sugar-2"
                                           src="/images/2 sugars.png"
                                           alt="2 sugar cubes"/>
-                                          <br/>`;
+                                          `;
                 } else if (milk === "milk") {
-                  cupMade.innerHTML = `<div class="make-cuppa">Enjoy your tea with ${milk} and ${sugar} sugars! 😀 </div>
-                                          <br />
+                  cupMade.innerHTML = `<div class="mt-3 mb-3 enjoy">Enjoy your tea with ${milk} and ${sugar} sugars! <i class="fas fa-grin smiley-symbol"></i> </div>
                                           <img
-                                           class="img-teapot"
+                                           class="img-fluid img-teapot"
                                            src="/images/teapot.png"
                                            alt="traditional ceramic teapot"/>
                                           <img
-                                           class="img-milk"
+                                           class="img-fluid img-milk"
                                            src="https://www.pngkey.com/png/full/67-671533_milk-jug.png"
                                            alt="milk jug pouring to a splash"/>
                                           <img
-                                          class="img-sugar-2"
+                                          class="img-fluid img-sugar-2"
                                           src="/images/2 sugars.png"
                                           alt="2 sugar cubes"/>
-                                          <br/>`;
+                                          `;
                 }
 
                 break;
@@ -120,33 +116,31 @@ function makeTea() {
 
               case "3": {
                 if (milk === "no milk") {
-                  cupMade.innerHTML = `<div class="make-cuppa">Enjoy your tea with ${milk} and ${sugar} sugars! 😀 </div>
-                                         <br />
+                  cupMade.innerHTML = `<div class="mt-3 mb-3 enjoy">Enjoy your tea with ${milk} and ${sugar} sugars! <i class="fas fa-grin smiley-symbol"></i> </div>
                                          <img
-                                          class="img-teapot"
+                                          class="img-fluid img-teapot"
                                           src="/images/teapot.png"
                                           alt="traditional ceramic teapot"/>
                                          <img
-                                          class="img-sugar-3"
+                                          class="img-fluid img-sugar-3"
                                           src="/images/3 sugars.png"
                                           alt="3 sugar cubes"/>
-                                          <br/>`;
+                                          `;
                 } else if (milk === "milk") {
-                  cupMade.innerHTML = `<div class="make-cuppa">Enjoy your tea with ${milk} and ${sugar} sugars! 😀 </div>
-                                          <br />
+                  cupMade.innerHTML = `<div class="mt-3 mb-3 enjoy">Enjoy your tea with ${milk} and ${sugar} sugars! <i class="fas fa-grin smiley-symbol"></i> </div>
                                           <img
-                                           class="img-teapot"
+                                           class="img-fluid img-teapot"
                                            src="/images/teapot.png"
                                            alt="traditional ceramic teapot"/>
                                           <img
-                                           class="img-milk"
+                                           class="img-fluid img-milk"
                                            src="/images/milk.png"
                                            alt="milk jug pouring to a splash"/>
                                           <img
-                                          class="img-sugar-3"
+                                          class="img-fluid img-sugar-3"
                                           src="/images/3 sugars.png"
                                           alt="3 sugar cubes"/>
-                                          <br/>`;
+                                          `;
                 }
 
                 break;
@@ -154,33 +148,31 @@ function makeTea() {
 
               case "4": {
                 if (milk === "no milk") {
-                  cupMade.innerHTML = `<div class="make-cuppa">Enjoy your tea with ${milk} and ${sugar} sugars (That's quite a sweet tooth you have!) </div>
-                                         <br />
+                  cupMade.innerHTML = `<div class="mt-3 mb-3 enjoy">Enjoy your tea with ${milk} and ${sugar} sugars (That's quite a sweet tooth you have!) </div>
                                          <img
-                                          class="img-teapot"
+                                          class="img-fluid img-teapot"
                                           src="/images/teapot.png"
                                           alt="traditional ceramic teapot"/>
                                          <img
-                                          class="img-sugar-4"
+                                          class="img-fluid img-sugar-4"
                                           src="/images/4 sugars.png"
                                           alt="4 sugar cubes"/>
-                                          <br/>`;
+                                          `;
                 } else if (milk === "milk") {
-                  cupMade.innerHTML = `<div class="make-cuppa">Enjoy your tea with ${milk} and ${sugar} sugars (That's quite a sweet tooth you have!) </div>
-                                          <br />
+                  cupMade.innerHTML = `<div class="mt-3 mb-3 enjoy">Enjoy your tea with ${milk} and ${sugar} sugars (That's quite a sweet tooth you have!) </div>
                                           <img
-                                           class="img-teapot"
+                                           class="img-fluid img-teapot"
                                            src="/images/teapot.png"
                                            alt="traditional ceramic teapot"/>
                                           <img
-                                           class="img-milk"
+                                           class="img-fluid img-milk"
                                            src="/images/milk.png"
                                            alt="milk jug pouring to a splash"/>
                                           <img
-                                          class="img-sugar-4"
+                                          class="img-fluid img-sugar-4"
                                           src="/images/4 sugars.png"
                                           alt="4 sugar cubes"/>
-                                          <br/>`;
+                                          `;
                 }
 
                 break;
@@ -192,25 +184,22 @@ function makeTea() {
                   "no sugar. (You're clearly sweet enough on your own)"
                 );
                 if (milk === "no milk") {
-                  cupMade.innerHTML = `<div class="make-cuppa">Enjoy your tea with ${milk} and ${sugar}!</div>
-                                         <br />
+                  cupMade.innerHTML = `<div class="mt-3 mb-3 enjoy">Enjoy your tea with ${milk} and ${sugar}!</div>
                                          <img
-                                          class="img-teapot"
+                                          class="img-fluid img-teapot"
                                           src="/images/teapot.png"
-                                          alt="traditional ceramic teapot"/>
-                                          <br/>`;
+                                          alt="traditional ceramic teapot"/>`;
                 } else if (milk === "milk") {
-                  cupMade.innerHTML = `<div class="make-cuppa">Enjoy your tea with ${milk} and ${sugar}!</div>
-                                          <br />
+                  cupMade.innerHTML = `<div class="mt-3 mb-3 enjoy">Enjoy your tea with ${milk} and ${sugar}!</div>
                                           <img
-                                           class="img-teapot"
+                                           class="img-fluid img-teapot"
                                            src="/images/teapot.png"
                                            alt="traditional ceramic teapot"/>
                                           <img
-                                           class="img-milk"
+                                           class="img-fluid img-milk"
                                            src="/images/milk.png"
                                            alt="milk jug pouring to a splash"/>
-                                           <br/>`;
+                                           `;
                 }
 
                 break;
