@@ -1,3 +1,66 @@
+// display result HTML
+
+function createHTML(milk, sugar) {
+  function formatSugarResult(sugar) {
+    let sugarResult = "";
+    {
+      switch (sugar) {
+        case 0: {
+          sugarResult = `no sugar. (You're clearly sweet enough)`;
+          break;
+        }
+        case 1: {
+          sugarResult = `one sugar!`;
+          break;
+        }
+        case 2: {
+          sugarResult = `${sugar} sugars!`;
+          break;
+        }
+        case 3: {
+          sugarResult = `${sugar} sugars!`;
+          break;
+        }
+        case 4: {
+          sugarResult = `4 sugars (You've quite the sweet tooth!)`;
+          break;
+        }
+      }
+    }
+    return sugarResult;
+  }
+  let resultElement = document.querySelector(".result");
+  let resultHTML = `<div class="mt-3 mb-3 enjoy">Enjoy your tea with ${milk} and ${formatSugarResult(
+    sugar
+  )} <i class="fas fa-grin smiley-symbol"></i></div>
+  <img
+      class="img-fluid img-teapot"
+      src="/images/teapot.png"
+      alt="traditional ceramic teapot"/>`;
+  if (milk === "milk") {
+    resultHTML =
+      resultHTML +
+      ` 
+  <img
+   class="img-fluid img-milk"
+   src="/images/milk.png"
+   alt="milk jug pouring to a splash"/>`;
+  } else if (milk === "no milk") {
+    resultHTML = resultHTML;
+  }
+  if (sugar > 0) {
+    resultHTML =
+      resultHTML +
+      `<img class="img-fluid img-sugar-${sugar}"
+            src="/images/${sugar} sugar.png"
+            alt="${sugar} sugar cube"/>
+            ;`;
+  } else {
+    resultHTML = resultHTML;
+  }
+  resultElement.innerHTML = resultHTML;
+}
+
 //Kettle switch
 let kettleStatus = document.querySelector(".kettle-status");
 function switchKettle() {
@@ -15,197 +78,66 @@ function activateBottom() {
   bottom.classList.toggle("bottom-highlight");
   switchKettle();
 }
-let cupMade = document.querySelector(".result");
+
+//make tea
+
+function takesSugar(milk, sugar) {
+  let sugars = [0, 1, 2, 3, 4];
+  if (sugars.includes(sugar)) {
+    createHTML(milk, sugar);
+  } else {
+    alert(`That is not a number. Please try again`);
+  }
+}
+
+function checkMilkAnswers(answer) {
+  let milkAnswers = ["milk", "yes", "with", "with milk", "milky"];
+  let noMilkAnswers = [
+    "no",
+    "no milk",
+    "black",
+    "black tea",
+    "none",
+    "without",
+    "without milk",
+    "milkless",
+  ];
+
+  if (milkAnswers.includes(answer)) {
+    return "milk";
+  } else if (noMilkAnswers.includes(answer)) {
+    return "no milk";
+  } else {
+    return answer;
+  }
+}
+
 function makeTea() {
   let milk = prompt("Sure thing! Do you prefer it with or without milk?");
   if (milk === null) {
     alert("Ok, no tea then, but you're missing out!");
   } else {
-    milk.toLowerCase();
-    milk = milk.replace("black", "no milk");
-    milk = milk.replace("none", "no milk");
-    milk = milk.replace("yes", "milk");
-    if (milk === "without" || milk === "without milk" || milk === "milkless") {
-      milk = "no milk";
-    }
-    if (milk === "with" || milk === "with milk" || milk === "milky") {
-      milk = "milk";
-    }
+    milk = milk.toLowerCase();
+    milk = checkMilkAnswers(milk);
 
     if (milk !== "milk" && milk !== "no milk") {
       alert(
         `Sorry, I don't understand "${milk}". Please try again and choose between milk or no milk`
       );
     } else {
-      let sugar = prompt(`Ok, ${milk} it is. And how many sugars?`);
-
+      let sugar = Number(prompt(`Ok, ${milk} it is. And how many sugars?`));
       if (sugar === null) {
         alert("Ok, no tea then, but you're missing out!");
       } else {
         while (sugar >= 5) {
-          sugar = prompt(
-            "Sorry, for the sake of your health, you can have a maximum of 4 sugars (which is very sweet indeed!) How many? (0-4)"
+          sugar = Number(
+            prompt(
+              "Sorry, for the sake of your health, you can have a maximum of 4 sugars (which is very sweet indeed!) How many? (0-4)"
+            )
           );
         }
         {
-          {
-            switch (sugar) {
-              case "1": {
-                if (milk === "no milk") {
-                  cupMade.innerHTML = `<div class="mt-3 mb-3 enjoy">Enjoy your tea with ${milk} and ${sugar} sugar! <i class="fas fa-grin smiley-symbol"></i> </div>
-                                         <img
-                                          class="img-fluid img-teapot"
-                                          src="/images/teapot.png"
-                                          alt="traditional ceramic teapot"/>
-                                         <img
-                                          class="img-fluid img-sugar"
-                                          src="/images/sugar cube.png"
-                                          alt="sugar cube"/>
-                                          `;
-                } else if (milk === "milk") {
-                  cupMade.innerHTML = `<div class="mt-3 mb-3 enjoy">Enjoy your tea with ${milk} and ${sugar} sugar! <i class="fas fa-grin smiley-symbol"></i> </div>
-                                          <img
-                                           class="img-fluid img-teapot"
-                                           src="/images/teapot.png"
-                                           alt="traditional ceramic teapot"/>
-                                          <img
-                                           class="img-fluid img-milk"
-                                           src="/images/milk.png"
-                                           alt="milk jug pouring to a splash"/>
-                                          <img
-                                          class="img-fluid img-sugar"
-                                          src="/images/sugar cube.png"
-                                          alt="sugar cube"/>
-                                          `;
-                }
-
-                break;
-              }
-
-              case "2": {
-                if (milk === "no milk") {
-                  cupMade.innerHTML = `<div class="mt-3 mb-3 enjoy">Enjoy your tea with ${milk} and ${sugar} sugars! <i class="fas fa-grin smiley-symbol"></i> </div>
-                                         <img
-                                          class="img-fluid img-teapot"
-                                          src="/images/teapot.png"
-                                          alt="traditional ceramic teapot"/>
-                                         <img
-                                          class="img-fluid img-sugar-2"
-                                          src="/images/2 sugars.png"
-                                          alt="2 sugar cubes"/>
-                                          `;
-                } else if (milk === "milk") {
-                  cupMade.innerHTML = `<div class="mt-3 mb-3 enjoy">Enjoy your tea with ${milk} and ${sugar} sugars! <i class="fas fa-grin smiley-symbol"></i> </div>
-                                          <img
-                                           class="img-fluid img-teapot"
-                                           src="/images/teapot.png"
-                                           alt="traditional ceramic teapot"/>
-                                          <img
-                                           class="img-fluid img-milk"
-                                           src="https://www.pngkey.com/png/full/67-671533_milk-jug.png"
-                                           alt="milk jug pouring to a splash"/>
-                                          <img
-                                          class="img-fluid img-sugar-2"
-                                          src="/images/2 sugars.png"
-                                          alt="2 sugar cubes"/>
-                                          `;
-                }
-
-                break;
-              }
-
-              case "3": {
-                if (milk === "no milk") {
-                  cupMade.innerHTML = `<div class="mt-3 mb-3 enjoy">Enjoy your tea with ${milk} and ${sugar} sugars! <i class="fas fa-grin smiley-symbol"></i> </div>
-                                         <img
-                                          class="img-fluid img-teapot"
-                                          src="/images/teapot.png"
-                                          alt="traditional ceramic teapot"/>
-                                         <img
-                                          class="img-fluid img-sugar-3"
-                                          src="/images/3 sugars.png"
-                                          alt="3 sugar cubes"/>
-                                          `;
-                } else if (milk === "milk") {
-                  cupMade.innerHTML = `<div class="mt-3 mb-3 enjoy">Enjoy your tea with ${milk} and ${sugar} sugars! <i class="fas fa-grin smiley-symbol"></i> </div>
-                                          <img
-                                           class="img-fluid img-teapot"
-                                           src="/images/teapot.png"
-                                           alt="traditional ceramic teapot"/>
-                                          <img
-                                           class="img-fluid img-milk"
-                                           src="/images/milk.png"
-                                           alt="milk jug pouring to a splash"/>
-                                          <img
-                                          class="img-fluid img-sugar-3"
-                                          src="/images/3 sugars.png"
-                                          alt="3 sugar cubes"/>
-                                          `;
-                }
-
-                break;
-              }
-
-              case "4": {
-                if (milk === "no milk") {
-                  cupMade.innerHTML = `<div class="mt-3 mb-3 enjoy">Enjoy your tea with ${milk} and ${sugar} sugars (That's quite a sweet tooth you have!) </div>
-                                         <img
-                                          class="img-fluid img-teapot"
-                                          src="/images/teapot.png"
-                                          alt="traditional ceramic teapot"/>
-                                         <img
-                                          class="img-fluid img-sugar-4"
-                                          src="/images/4 sugars.png"
-                                          alt="4 sugar cubes"/>
-                                          `;
-                } else if (milk === "milk") {
-                  cupMade.innerHTML = `<div class="mt-3 mb-3 enjoy">Enjoy your tea with ${milk} and ${sugar} sugars (That's quite a sweet tooth you have!) </div>
-                                          <img
-                                           class="img-fluid img-teapot"
-                                           src="/images/teapot.png"
-                                           alt="traditional ceramic teapot"/>
-                                          <img
-                                           class="img-fluid img-milk"
-                                           src="/images/milk.png"
-                                           alt="milk jug pouring to a splash"/>
-                                          <img
-                                          class="img-fluid img-sugar-4"
-                                          src="/images/4 sugars.png"
-                                          alt="4 sugar cubes"/>
-                                          `;
-                }
-
-                break;
-              }
-
-              case "0": {
-                sugar = sugar.replace(
-                  0,
-                  "no sugar. (You're clearly sweet enough on your own)"
-                );
-                if (milk === "no milk") {
-                  cupMade.innerHTML = `<div class="mt-3 mb-3 enjoy">Enjoy your tea with ${milk} and ${sugar}!</div>
-                                         <img
-                                          class="img-fluid img-teapot"
-                                          src="/images/teapot.png"
-                                          alt="traditional ceramic teapot"/>`;
-                } else if (milk === "milk") {
-                  cupMade.innerHTML = `<div class="mt-3 mb-3 enjoy">Enjoy your tea with ${milk} and ${sugar}!</div>
-                                          <img
-                                           class="img-fluid img-teapot"
-                                           src="/images/teapot.png"
-                                           alt="traditional ceramic teapot"/>
-                                          <img
-                                           class="img-fluid img-milk"
-                                           src="/images/milk.png"
-                                           alt="milk jug pouring to a splash"/>
-                                           `;
-                }
-
-                break;
-              }
-            }
-          }
+          takesSugar(milk, sugar);
         }
       }
     }
