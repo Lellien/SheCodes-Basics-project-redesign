@@ -53,30 +53,11 @@ function createHTML(milk, sugar) {
       resultHTML +
       `<img class="img-fluid img-sugar-${sugar}"
             src="/images/${sugar} sugar.png"
-            alt="${sugar} sugar cube"/>
-            ;`;
+            alt="${sugar} sugar cube"/>`;
   } else {
     resultHTML = resultHTML;
   }
   resultElement.innerHTML = resultHTML;
-}
-
-//Kettle switch
-let kettleStatus = document.querySelector(".kettle-status");
-function switchKettle() {
-  if (kettleStatus.innerHTML === "<strong>OFF</strong>") {
-    kettleStatus.innerHTML = "<strong>ON</strong>";
-    kettleStatus.classList.toggle("kettle-status-on");
-  } else {
-    kettleStatus.innerHTML = "<strong>OFF</strong>";
-    kettleStatus.classList.toggle("kettle-status-on");
-  }
-}
-
-let bottom = document.querySelector(".bottom");
-function activateBottom() {
-  bottom.classList.toggle("bottom-highlight");
-  switchKettle();
 }
 
 //make tea
@@ -144,11 +125,6 @@ function makeTea() {
   }
 }
 
-let makeCupButton = document.querySelector("button");
-makeCupButton.addEventListener("click", makeTea);
-makeCupButton.addEventListener("mouseover", activateBottom);
-makeCupButton.addEventListener("mouseout", activateBottom);
-
 //Boxes click events
 
 function showImage(element) {
@@ -181,3 +157,39 @@ box1.addEventListener("click", checkbox);
 box2.addEventListener("click", checkbox);
 box3.addEventListener("click", checkbox);
 box4.addEventListener("click", checkbox);
+
+//Kettle switch
+let kettleStatus = document.querySelector(".kettle-status");
+function switchKettle() {
+  if (kettleStatus.innerHTML === "<strong>OFF</strong>") {
+    kettleStatus.innerHTML = "<strong>ON</strong>";
+    kettleStatus.classList.toggle("kettle-status-on");
+  } else {
+    kettleStatus.innerHTML = "<strong>OFF</strong>";
+    kettleStatus.classList.toggle("kettle-status-on");
+  }
+}
+
+let bottom = document.querySelector(".bottom");
+function activateBottom() {
+  bottom.classList.toggle("bottom-highlight");
+  switchKettle();
+}
+
+let makeCupButton = document.querySelector("button");
+makeCupButton.addEventListener("click", makeTea);
+
+let observer = new IntersectionObserver(
+  function (entries) {
+    if (entries[0]["isIntersecting"] === true) {
+      if (entries[0]["intersectionRatio"] === 1) {
+        activateBottom();
+      }
+    } else {
+      activateBottom();
+    }
+  },
+  { threshold: [1] }
+);
+
+observer.observe(document.querySelector(".arrow"));
