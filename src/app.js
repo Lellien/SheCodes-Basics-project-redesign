@@ -125,6 +125,9 @@ function makeTea() {
   }
 }
 
+let makeCupButton = document.querySelector("button");
+makeCupButton.addEventListener("click", makeTea);
+
 //Boxes click events
 
 function showImage(element) {
@@ -159,25 +162,18 @@ box3.addEventListener("click", checkbox);
 box4.addEventListener("click", checkbox);
 
 //Kettle switch
-let kettleStatus = document.querySelector(".kettle-status");
-function switchKettle() {
-  if (kettleStatus.innerHTML === "<strong>OFF</strong>") {
-    kettleStatus.innerHTML = "<strong>ON</strong>";
-    kettleStatus.classList.toggle("kettle-status-on");
-  } else {
-    kettleStatus.innerHTML = "<strong>OFF</strong>";
-    kettleStatus.classList.toggle("kettle-status-on");
-  }
+
+function deactivateBottom() {
+  bottom.classList.remove("bottom-highlight");
+  kettleStatus.innerHTML = "<strong>OFF</strong>";
+  kettleStatus.classList.remove("kettle-status-on");
 }
 
-let bottom = document.querySelector(".bottom");
 function activateBottom() {
-  bottom.classList.toggle("bottom-highlight");
-  switchKettle();
+  bottom.classList.add("bottom-highlight");
+  kettleStatus.innerHTML = "<strong>ON</strong>";
+  kettleStatus.classList.add("kettle-status-on");
 }
-
-let makeCupButton = document.querySelector("button");
-makeCupButton.addEventListener("click", makeTea);
 
 let observer = new IntersectionObserver(
   function (entries) {
@@ -186,10 +182,13 @@ let observer = new IntersectionObserver(
         activateBottom();
       }
     } else {
-      activateBottom();
+      deactivateBottom();
     }
   },
   { threshold: [1] }
 );
+
+let bottom = document.querySelector(".bottom");
+let kettleStatus = document.querySelector(".kettle-status");
 
 observer.observe(document.querySelector(".make-cuppa"));
