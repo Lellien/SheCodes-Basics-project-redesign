@@ -192,4 +192,4 @@ let observer = new IntersectionObserver(
   { threshold: [1] }
 );
 
-observer.observe(document.querySelector(".arrow"));
+observer.observe(document.querySelector(".make-cuppa"));
